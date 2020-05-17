@@ -14,8 +14,12 @@ import 'package:hive/src/box/lazy_box_impl.dart';
 import 'package:hive/src/util/extensions.dart';
 import 'package:hive/src/registry/type_registry_impl.dart';
 import 'package:meta/meta.dart';
+import 'package:injectable/injectable.dart';
 
 import 'backend/storage_backend.dart';
+
+@Injectable(as: HiveInterface)
+@injectable
 
 /// Not part of public API
 class HiveImpl extends TypeRegistryImpl implements HiveInterface {
